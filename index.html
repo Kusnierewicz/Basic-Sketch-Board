@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Shetch projcekt</title>
-	<link rel="stylesheet" href="reset.css">
-	<link rel="stylesheet" href="style.css">
+	<title>sketch</title>
+	<!-- If you are serving the site over HTTPS you have to load jQuery over HTTPS to make it work properly. -->
+	<!-- Scripts with the defer attribute are executed in order (i.e. first script 1, then script 2). This also does not block the browser.
+	Unlike async scripts, defer scripts are only executed after the entire document has been loaded. -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" defer></script>
+	<script type="text/javascript" src="script.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<div class="container">
-	<div class="console">
-			<button class="clear">Clear</button>
-			<button class="new">New</button>
-			<button class="save">Save</button>
+	<div id="popup" class="popup">
+		<div class="popup-content">
+			<p>Select size of the grid (from 16 to 64)</p>
+			<form action="index_submit" method="get" accept-charset="utf-8">
+        		<input type="sketch_size" name="sketch_size">
+        	</form>
+			<a href="javascript:void(0);" id="create">Create!</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="camera"></div>
+		<div class="container2">
+			<div class="palette">
+				<button id="blue"><a href="javascript:void(0);" ></a></button>
+				<button id="red"><a href="javascript:void(0);" ></a></button>
+				<button id="green"><a href="javascript:void(0);" ></a></button>
+			</div>
+			<div class="sketch">
+			</div>
+			<div class="console">
+				<button class="clear">Clear</button>
+				<button class="new">New</button>
+				<button class="save">Save</button>
+			</div>
+
+		</div>
+		<div class="base_button"><button class="consoleb"></div>
 	</div>
 
-	<div class="sketch one"></div>
-	
-</div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
