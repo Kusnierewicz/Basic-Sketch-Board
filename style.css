@@ -110,6 +110,12 @@ body {
 	outline: none;
 }
 
+@-moz-document url-prefix()
+{
+  .consoleb
+  	{ top: 14px;  }
+}
+
 .palette {
 	overflow: hidden;
 	display: none;
